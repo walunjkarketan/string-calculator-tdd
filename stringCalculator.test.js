@@ -19,5 +19,10 @@ test('handles new lines as delimiters in addition to commas', () => {
 test('supports custom delimiters defined in the input', () => {
     expect(stringCalculator.add("//;\n1;2")).toBe(3);
 });
+
+test('throws an exception for negative numbers', () => {
+    expect(() => stringCalculator.add("1,-2,3,-4")).toThrow("negative numbers not allowed: -2,-4");
+});
+  
   
 
