@@ -1,6 +1,8 @@
 function add(numbers) {
     if (numbers === "") return 0;
-    return null; // Placeholder for further cases
+    if (!numbers.includes(",")) return parseInt(numbers, 10);
+    return null;
 }
+
 
 module.exports = { add };
